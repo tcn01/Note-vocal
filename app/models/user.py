@@ -1,4 +1,5 @@
-from sqlalchemy import Boolean, Column, Integer, String
+from sqlalchemy import Boolean, Column, DateTime, Enum, Integer, String
+from sqlalchemy.sql import func
 
 from app.core.database import Base
 
@@ -10,4 +11,7 @@ class User(Base):
     email = Column(String, unique=True, index=True, nullable=False)
     hashed_password = Column(String, nullable=False)
     name = Column(String, nullable=False)
+    preferred_language = Column(Enum("vi", "en", "zh", name="preferred_language"), default="vi")
+    role = Column(Enum("admin", "user", name="user_role"), default="user")
     is_active = Column(Boolean, default=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now())

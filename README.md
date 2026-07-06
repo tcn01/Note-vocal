@@ -1,34 +1,52 @@
-# VisionNest API
+# VisionNest
 
-Production-ready FastAPI backend with async patterns, PostgreSQL, JWT authentication, and layered architecture.
+Học ngôn ngữ thông minh với AI (Anh/Trung).
 
-## Tech Stack
-
-- **FastAPI** — async REST framework
-- **PostgreSQL + asyncpg** — async database
-- **SQLAlchemy 2.0** — async ORM
-- **JWT + bcrypt** — authentication
-- **Pytest + httpx** — async testing
-
-## Project Structure
+## Cấu trúc project
 
 ```
-app/
-├── api/v1/endpoints/   # Route handlers
-├── core/               # Config, database, security
-├── models/             # SQLAlchemy models
-├── schemas/            # Pydantic validation
-├── repositories/       # Data access layer
-├── services/           # Business logic
-└── main.py             # App entry point
+VisionNest/
+├── app/               # Backend (FastAPI)
+├── frontend/          # Frontend (React + TypeScript)
+├── tests/             # Backend tests
+├── requirements.txt
+└── README.md
 ```
 
-## Setup
+## Backend Setup
+
+### Prerequisites
+- Docker & Docker Compose (cho database)
+- Python 3.11+
+
+### 1. Khởi động database
+
+```bash
+docker compose up -d
+```
+
+### 2. Chạy backend
 
 ```bash
 cp .env.example .env
+venv\Scripts\activate       # Windows
 pip install -r requirements.txt
-uvicorn app.main:app --reload
+python -m alembic upgrade head   # Tạo bảng
+uvicorn app.main:app --reload    # http://localhost:8000
+```
+
+Hoặc dùng script tự động:
+
+```bash
+start.bat
+```
+
+## Frontend Setup
+
+```bash
+cd frontend
+npm install
+npm run dev                     # http://localhost:3000
 ```
 
 ## API Endpoints
@@ -46,5 +64,6 @@ uvicorn app.main:app --reload
 ## Testing
 
 ```bash
-pytest tests/ -v
+pytest tests/ -v               # Backend tests
+cd frontend && npm run build    # Frontend build
 ```

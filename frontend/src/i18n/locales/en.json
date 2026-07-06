@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "vocabulary": "Vocabulary",
+    "grammar": "Grammar",
+    "test": "Test",
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "name": "Full name"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "loading": "Loading..."
+  }
+}

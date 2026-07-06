@@ -5,3 +5,5 @@ __pycache__/
 .pytest_cache/
 venv/
 .venv/
+frontend/node_modules/
+app/migrations/migration.db

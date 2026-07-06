@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "vocabulary": "Từ vựng",
+    "grammar": "Ngữ pháp",
+    "test": "Bài test",
+    "login": "Đăng nhập",
+    "register": "Đăng ký",
+    "logout": "Đăng xuất"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Mật khẩu",
+    "name": "Họ tên"
+  },
+  "common": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "loading": "Đang tải..."
+  }
+}

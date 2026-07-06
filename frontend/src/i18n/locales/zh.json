@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "首页",
+    "vocabulary": "词汇",
+    "grammar": "语法",
+    "test": "测试",
+    "login": "登录",
+    "register": "注册",
+    "logout": "退出"
+  },
+  "auth": {
+    "email": "邮箱",
+    "password": "密码",
+    "name": "姓名"
+  },
+  "common": {
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "loading": "加载中..."
+  }
+}
