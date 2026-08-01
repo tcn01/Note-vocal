@@ -1,3 +1,4 @@
+import logging
 from datetime import timedelta
 
 from fastapi import APIRouter, Depends, HTTPException, status
@@ -9,6 +10,8 @@ from app.core.security import create_access_token
 from app.schemas.auth import LoginRequest, Token
 from app.services.user_service import user_service
 
+logger = logging.getLogger(__name__)
+
 router = APIRouter()
 settings = get_settings()
 
@@ -18,15 +21,26 @@ async def login(
     login_in: LoginRequest,
     db: AsyncSession = Depends(get_db),
 ):
-    user = await user_service.authenticate(db, login_in.email, login_in.password)
-    if not user:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Incorrect email or password",
-        )
+    try:
+        user = await user_service.authenticate(db, login_in.email, login_in.password)
+        if not user:
+            logger.warning("Login failed: email=%s", login_in.email)
+            raise HTTPException(
+                status_code=status.HTTP_401_UNAUTHORIZED,
+                detail="Incorrect email or password",
+            )
 
-    access_token = create_access_token(
-        data={"sub": str(user.id)},
-        expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES),
-    )
-    return Token(access_token=access_token)
+        access_token = create_access_token(
+            data={"sub": str(user.id)},
+            expires_delta=timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES),
+        )
+        logger.info("Login success: id=%s email=%s", user.id, user.email)
+        return Token(access_token=access_token)
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error("Login error: %s", e)
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Internal server error",
+        )

@@ -81,3 +81,40 @@ async def test_read_current_user(client):
     )
     assert response.status_code == 200
     assert response.json()["email"] == "me@example.com"
+
+
+@pytest.mark.asyncio
+async def test_login_invalid_password(client):
+    await client.post(
+        "/api/v1/users/",
+        json={
+            "email": "wrongpw@example.com",
+            "password": "correctpass",
+            "name": "Wrong PW",
+        },
+    )
+    response = await client.post(
+        "/api/v1/auth/login",
+        json={"email": "wrongpw@example.com", "password": "wrongpass"},
+    )
+    assert response.status_code == 401
+    assert "Incorrect email or password" in response.json()["detail"]
+
+
+@pytest.mark.asyncio
+async def test_login_nonexistent_user(client):
+    response = await client.post(
+        "/api/v1/auth/login",
+        json={"email": "nobody@example.com", "password": "anypass"},
+    )
+    assert response.status_code == 401
+    assert "Incorrect email or password" in response.json()["detail"]
+
+
+@pytest.mark.asyncio
+async def test_access_expired_token(client):
+    response = await client.get(
+        "/api/v1/users/me",
+        headers={"Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwiZXhwIjoxNzAwMDAwMDAwfQ.abc"},
+    )
+    assert response.status_code == 401

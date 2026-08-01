@@ -7,3 +7,6 @@ venv/
 .venv/
 frontend/node_modules/
 app/migrations/migration.db
+logs/
+frontend/dist/
+*.tsbuildinfo

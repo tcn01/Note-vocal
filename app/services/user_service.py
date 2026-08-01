@@ -3,6 +3,7 @@ from typing import Optional
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.core.security import get_password_hash, verify_password
+from app.models.user import User as UserModel
 from app.repositories.user_repository import user_repository
 from app.schemas.user import User, UserCreate, UserUpdate
 
@@ -18,8 +19,11 @@ class UserService:
 
         user_dict = user_in.model_dump()
         user_dict["hashed_password"] = get_password_hash(user_dict.pop("password"))
-        user = await self.repository.create(db, UserCreate(**user_dict))
-        return user
+        db_obj = UserModel(**user_dict)
+        db.add(db_obj)
+        await db.flush()
+        await db.refresh(db_obj)
+        return db_obj
 
     async def authenticate(
         self, db: AsyncSession, email: str, password: str

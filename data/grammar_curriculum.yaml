@@ -1,0 +1,263 @@
+# =============================================
+# CHƯƠNG TRÌNH NGỮ PHÁP IELTS (A1 -> B2)
+# 48 topics, chia 4 level, mỗi level 12 bài
+# =============================================
+# categories:
+#   - Tenses: Các thì trong tiếng Anh
+#   - Sentence Structure: Cấu trúc câu
+#   - Vocabulary & Grammar: Từ vựng kết hợp ngữ pháp
+# =============================================
+
+categories:
+  - name: "Tenses"
+  - name: "Sentence Structure"
+  - name: "Vocabulary & Grammar"
+
+topics:
+  # ===================== A1 =====================
+  - order: 1
+    topic: "Present Simple — to be"
+    level: "A1"
+    category: "Tenses"
+    description: "Cách dùng am/is/are trong câu khẳng định, phủ định, nghi vấn"
+  - order: 2
+    topic: "Present Simple — other verbs"
+    level: "A1"
+    category: "Tenses"
+    description: "Thêm s/es với ngôi thứ 3 số ít, trợ động từ do/does"
+  - order: 3
+    topic: "Articles: a/an, the"
+    level: "A1"
+    category: "Vocabulary & Grammar"
+    description: "Mạo từ cơ bản — khi nào dùng a, an, the"
+  - order: 4
+    topic: "There is / There are"
+    level: "A1"
+    category: "Sentence Structure"
+    description: "Cấu trúc giới thiệu sự tồn tại của người/vật"
+  - order: 5
+    topic: "Present Continuous"
+    level: "A1"
+    category: "Tenses"
+    description: "Hành động đang xảy ra — dùng am/is/are + V-ing"
+  - order: 6
+    topic: "Can / Can't"
+    level: "A1"
+    category: "Vocabulary & Grammar"
+    description: "Động từ khuyết thiếu chỉ khả năng"
+  - order: 7
+    topic: "Possessives"
+    level: "A1"
+    category: "Vocabulary & Grammar"
+    description: "Sở hữu cách ('s) và tính từ sở hữu (my/your/his/her)"
+  - order: 8
+    topic: "Prepositions of Place"
+    level: "A1"
+    category: "Vocabulary & Grammar"
+    description: "in, on, at, under, next to, between"
+  - order: 9
+    topic: "Imperatives"
+    level: "A1"
+    category: "Sentence Structure"
+    description: "Câu mệnh lệnh — đưa chỉ dẫn, yêu cầu"
+  - order: 10
+    topic: "Plural Nouns"
+    level: "A1"
+    category: "Vocabulary & Grammar"
+    description: "Danh từ số nhiều — thêm s/es, bất quy tắc"
+  - order: 11
+    topic: "Personal Pronouns & Possessive Adjectives"
+    level: "A1"
+    category: "Vocabulary & Grammar"
+    description: "I/my, you/your, he/his, she/her, it/its, we/our, they/their"
+  - order: 12
+    topic: "Adverbs of Frequency"
+    level: "A1"
+    category: "Sentence Structure"
+    description: "always, usually, often, sometimes, never — vị trí trong câu"
+
+  # ===================== A2 =====================
+  - order: 13
+    topic: "Past Simple — regular verbs"
+    level: "A2"
+    category: "Tenses"
+    description: "Quá khứ đơn — thêm ed, cách phát âm đuôi ed"
+  - order: 14
+    topic: "Past Simple — irregular verbs"
+    level: "A2"
+    category: "Tenses"
+    description: "Động từ bất quy tắc thông dụng"
+  - order: 15
+    topic: "Past Simple — to be"
+    level: "A2"
+    category: "Tenses"
+    description: "was/were trong quá khứ đơn"
+  - order: 16
+    topic: "Countable & Uncountable Nouns"
+    level: "A2"
+    category: "Vocabulary & Grammar"
+    description: "Danh từ đếm được/không đếm được"
+  - order: 17
+    topic: "Some / Any / No"
+    level: "A2"
+    category: "Vocabulary & Grammar"
+    description: "Phân biệt some, any, no với danh từ"
+  - order: 18
+    topic: "Comparatives & Superlatives"
+    level: "A2"
+    category: "Sentence Structure"
+    description: "So sánh hơn và so sánh nhất"
+  - order: 19
+    topic: "Future — going to"
+    level: "A2"
+    category: "Tenses"
+    description: "Dự định và dự đoán có căn cứ"
+  - order: 20
+    topic: "Future — will"
+    level: "A2"
+    category: "Tenses"
+    description: "Quyết định tức thời, lời hứa, dự đoán không căn cứ"
+  - order: 21
+    topic: "Prepositions of Time"
+    level: "A2"
+    category: "Vocabulary & Grammar"
+    description: "in (tháng/năm), on (ngày), at (giờ)"
+  - order: 22
+    topic: "Verb + to-infinitive / gerund"
+    level: "A2"
+    category: "Sentence Structure"
+    description: "like/hate/enjoy + V-ing, want/decide + to V"
+  - order: 23
+    topic: "Present Continuous for Future"
+    level: "A2"
+    category: "Tenses"
+    description: "Dùng hiện tại tiếp diễn cho kế hoạch tương lai"
+  - order: 24
+    topic: "Questions & Question Words"
+    level: "A2"
+    category: "Sentence Structure"
+    description: "Wh-questions, yes/no questions, cấu trúc câu hỏi"
+
+  # ===================== B1 =====================
+  - order: 25
+    topic: "Present Perfect — experience"
+    level: "B1"
+    category: "Tenses"
+    description: "Kinh nghiệm, thành tựu — ever/never/been/gone"
+  - order: 26
+    topic: "Present Perfect — for/since/already/yet/just"
+    level: "B1"
+    category: "Tenses"
+    description: "Khoảng thời gian, điểm bắt đầu, trạng từ đi kèm"
+  - order: 27
+    topic: "Present Perfect Continuous"
+    level: "B1"
+    category: "Tenses"
+    description: "Hành động bắt đầu trong quá khứ kéo dài đến hiện tại"
+  - order: 28
+    topic: "Past Continuous"
+    level: "B1"
+    category: "Tenses"
+    description: "Hành động đang xảy ra tại thời điểm trong quá khứ"
+  - order: 29
+    topic: "Past Perfect"
+    level: "B1"
+    category: "Tenses"
+    description: "Hành động xảy ra trước một hành động khác trong quá khứ"
+  - order: 30
+    topic: "First Conditional"
+    level: "B1"
+    category: "Sentence Structure"
+    description: "If + Present Simple, will + V — điều kiện có thật ở tương lai"
+  - order: 31
+    topic: "Second Conditional"
+    level: "B1"
+    category: "Sentence Structure"
+    description: "If + Past Simple, would + V — điều kiện không có thật"
+  - order: 32
+    topic: "Passive Voice — Present & Past"
+    level: "B1"
+    category: "Sentence Structure"
+    description: "Câu bị động thì hiện tại và quá khứ"
+  - order: 33
+    topic: "Relative Clauses — who/which/that/whose"
+    level: "B1"
+    category: "Sentence Structure"
+    description: "Mệnh đề quan hệ xác định và không xác định"
+  - order: 34
+    topic: "Modal Verbs — should/must/have to"
+    level: "B1"
+    category: "Vocabulary & Grammar"
+    description: "Khuyên bảo, bắt buộc, nghĩa vụ"
+  - order: 35
+    topic: "Reported Speech — statements"
+    level: "B1"
+    category: "Sentence Structure"
+    description: "Câu tường thuật — lùi thì, thay đổi đại từ/trạng từ"
+  - order: 36
+    topic: "So / Such / Too / Enough"
+    level: "B1"
+    category: "Sentence Structure"
+    description: "Cấu trúc nhấn mạnh với so/such/too/enough"
+
+  # ===================== B2 =====================
+  - order: 37
+    topic: "Third Conditional"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "If + Past Perfect, would have + V3 — điều kiện không có thật trong quá khứ"
+  - order: 38
+    topic: "Mixed Conditionals"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Kết hợp điều kiện loại 2 và 3"
+  - order: 39
+    topic: "Passive Voice — all tenses & modals"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Câu bị động với động từ khuyết thiếu, tất cả các thì"
+  - order: 40
+    topic: "Future Perfect & Future Continuous"
+    level: "B2"
+    category: "Tenses"
+    description: "Hành động sẽ hoàn thành / đang xảy ra tại thời điểm trong tương lai"
+  - order: 41
+    topic: "Reported Speech — questions & commands"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Tường thuật câu hỏi và câu mệnh lệnh"
+  - order: 42
+    topic: "Causatives — have/get something done"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Cấu trúc nhờ vả, thuê ai làm gì"
+  - order: 43
+    topic: "Inversion"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Đảo ngữ với never, rarely, not only, hardly"
+  - order: 44
+    topic: "Emphasis — cleft sentences"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Câu chẻ — It is/was ... that ... để nhấn mạnh"
+  - order: 45
+    topic: "Advanced Relative Clauses"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Mệnh đề quan hệ không xác định, giới từ đầu mệnh đề"
+  - order: 46
+    topic: "Unreal Past — wish/if only"
+    level: "B2"
+    category: "Sentence Structure"
+    description: "Ước muốn không có thật — wish + Past Simple/Past Perfect"
+  - order: 47
+    topic: "Linking Words — despite/although/however"
+    level: "B2"
+    category: "Vocabulary & Grammar"
+    description: "Liên từ và trạng từ nối chỉ sự nhượng bộ, tương phản"
+  - order: 48
+    topic: "Complex Prepositions & Phrasal Verbs"
+    level: "B2"
+    category: "Vocabulary & Grammar"
+    description: "Giới từ phức hợp và cụm động từ học thuật cho IELTS"

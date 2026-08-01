@@ -1,22 +1,26 @@
-import apiClient from "./client"
-import type { LoginRequest, Token, User, UserCreate } from "../types"
+import apiClient from './client';
+import type { Token, User, UserGrammarSettings } from '../types';
 
-export const authApi = {
-  login: (data: LoginRequest) =>
-    apiClient.post<Token>("/auth/login", data),
+export const authAPI = {
+  login: async (email: string, password: string): Promise<Token> => {
+    const response = await apiClient.post<Token>('/auth/login', { email, password });
+    return response.data;
+  },
 
-  register: (data: UserCreate) =>
-    apiClient.post<User>("/users/", data),
+  register: async (data: { email: string; name: string; password: string; preferred_language?: string }): Promise<User> => {
+    const response = await apiClient.post<User>('/users/', data);
+    return response.data;
+  },
 
-  me: () =>
-    apiClient.get<User>("/users/me"),
-}
+  getCurrentUser: async (): Promise<User> => {
+    const response = await apiClient.get<User>('/users/me');
+    return response.data;
+  },
 
-export const saveToken = (token: string) =>
-  localStorage.setItem("access_token", token)
-
-export const getToken = () =>
-  localStorage.getItem("access_token")
-
-export const clearToken = () =>
-  localStorage.removeItem("access_token")
+  setGrammarLevel: async (level: string): Promise<UserGrammarSettings> => {
+    const response = await apiClient.patch<UserGrammarSettings>('/users/me/grammar-level', {
+      grammar_level: level,
+    });
+    return response.data;
+  },
+};
